@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
-import '../login.cssnpm run dev'
+import '../login.css'
 
 function Login() {
   
