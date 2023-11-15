@@ -5,9 +5,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Snackbar } from '@mui/material';
 
-
-
-import '../conteudo.css'
+import '../conteudo.css';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -29,6 +27,7 @@ function Home() {
     setOpenEntrada(true);
   };
 
+
   const handleCloseEntrada = () => {
     setOpenEntrada(false);
   };
@@ -41,73 +40,114 @@ function Home() {
     setOpenSaida(false);
   };
 
-  const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+  const [snackbarOpenEntrada, setSnackbarOpenEntrada] = React.useState(false);
+  const [snackbarOpenSaida, setSnackbarOpenSaida] = React.useState(false);
 
-  const handleClick = () => {
-    setSnackbarOpen(true);
+  const handleClickEntrada = () => {
+    setSnackbarOpenEntrada(true);
   };
 
-  const handleCloseSnackbar = (_event: React.SyntheticEvent | Event, reason?: string) => {
+  const handleCloseSnackbarEntrada = (_event: React.SyntheticEvent | Event, reason?: string) => {
     if (reason === 'clickaway') {
       return;
     }
-
-    setSnackbarOpen(false);
+    setSnackbarOpenEntrada(false);
   };
 
-  const action = (
+  const handleClickSaida = () => {
+    setSnackbarOpenSaida(true);
+  };
+
+  const handleCloseSnackbarSaida = (_event: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setSnackbarOpenSaida(false);
+  };
+
+  const actionEntrada = (
     <React.Fragment>
-      <Button color="secondary" size="small" onClick={handleCloseSnackbar}>
+      <Button color="secondary" size="small" onClick={handleCloseSnackbarEntrada}>
         UNDO
       </Button>
-      <IconButton size="small" aria-label="close" color="inherit" onClick={handleCloseSnackbar}>
+      <IconButton size="small" aria-label="close" color="inherit" onClick={handleCloseSnackbarEntrada}>
       </IconButton>
     </React.Fragment>
   );
 
+  const actionSaida = (
+    <React.Fragment>
+      <Button color="secondary" size="small" onClick={handleCloseSnackbarSaida}>
+        UNDO
+      </Button>
+      <IconButton size="small" aria-label="close" color="inherit" onClick={handleCloseSnackbarSaida}>
+      </IconButton>
+    </React.Fragment>
+  );
 
-  
   return (
     <div className='Home'>
       <div id='barra_menu_TelaInicial'>
 
-      <div id='perfil_home'>
+        <div id='perfil_home'>
 
           <div id='imagens_menu_Humburguer'>
-          <div className="hamburger-container">
-            <input className="checkbox" type="checkbox" id="hamburger-toggle" aria-label="Toggle Navigation"/>
-            <label className="hamburger" htmlFor="hamburger-toggle">
-            <img id='perfil' src="imagens/perfil.png" alt="" />
-            </label>
+            <div className="hamburger-container">
+              <input className="checkbox" type="checkbox" id="hamburger-toggle" aria-label="Toggle Navigation" />
+              <label className="hamburger" htmlFor="hamburger-toggle">
+                <img id='perfil' src="imagens/perfil.png" alt="" />
+              </label>
 
-            <div className="drawer">
-            <label className="hamburger" htmlFor="hamburger-toggle">
-            <img id='perfil2' src="imagens/perfil.png" alt="" />
-            </label>
-              <ul className="nav-list">
-                <li className="nav-list-item"><a href="Configuracao"><img id='icones' src="imagens/icone_config.png" alt=""/> Configuração</a></li><br/>
-                <li className="nav-list-item"><a href="/"><img id='icones' src="imagens/icone_sair.png" alt=""/> Sair</a></li>
-              </ul>
+              <div className="drawer">
+                <label className="hamburger" htmlFor="hamburger-toggle">
+                  <img id='perfil2' src="imagens/perfil.png" alt="" />
+                </label>
+                <ul className="nav-list">
+                  <li className="nav-list-item"><a href="Configuracao"><img id='icones' src="imagens/icone_config.png" alt="" /> Configuração</a></li><br />
+                  <li className="nav-list-item"><a href="/"><img id='icones' src="imagens/icone_sair.png" alt="" /> Sair</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-          </div>
 
-            <div id='informacões'>
+          <div id='informacões'>
             <p>NOME: <span> Gabriel Santos</span></p><br />
             <p>CODIGO DO FUNCIONARIO: <span>9876543</span></p>
-            </div>
+          </div>
         </div>
- 
+
       </div>
 
       <div id='conteudo_home'>
         <div id='slide'>
-        
+          <div className="card-slider">
+            <div className="card">
+              <div className="card-content_presença">
+                <h3>presença</h3>
+                <p>Conteúdo do card 1.</p>
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="card-content_faltasj">
+                <h3>faltas justificadas</h3>
+                <p>Conteúdo do card 2.</p>
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="card-content_faltas">
+                <h3>faltas</h3>
+                <p>Conteúdo do card 3.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <br/>
+        <br />
+        <br />
 
         <div id='botoes_home'>
-            <React.Fragment>
+          <React.Fragment>
             <Button type='button' variant='contained' id='entrada' onClick={handleOpenEntrada}>Registrar Entrada </Button>
             <Modal
               open={openEntrada}
@@ -115,39 +155,39 @@ function Home() {
               aria-labelledby="entrada-modal-title"
               aria-describedby="entrada-modal-description"
             >
-              <Box sx={{ ...style, minwidth: 200,maxWidth: 500 }}>
+              <Box sx={{ ...style, minwidth: 200, maxWidth: 500 }}>
                 <h2 id="child-modal-title">Registrar Entrada</h2><br />
 
                 <div id='cod_funcionario'>
-                <input type="text"  placeholder='digite o codigo do funcionario'/><br/><br/>
+                  <input type="text" placeholder='digite o codigo do funcionario' /><br /><br />
                 </div>
 
                 <label htmlFor="pick-one"><h4>Local</h4></label>
                 <select id="pick-one">
-                    <option value="Home-Office">Home-Office</option>
-                    <option value="Empresa">Empresa</option>
+                  <option value="Home-Office">Home-Office</option>
+                  <option value="Empresa">Empresa</option>
                 </select><br /><br />
 
                 <div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15800.161530914553!2d-34.939626!3d-8.0973644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1699603166731!5m2!1spt-PT!2sbr" width="90%" height="300" style={{ border: '0' }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-              </div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15800.161530914553!2d-34.939626!3d-8.0973644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1699603166731!5m2!1spt-PT!2sbr" width="90%" height="300" style={{ border: '0' }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
-              <Button type='button' variant='contained' id='botão_comfirm_home'onClick={() => {
-              handleCloseEntrada();
-              handleClick();
-              }}>confirmar</Button>
+                <Button type='button' variant='contained' id='botão_comfirm_home' onClick={() => {
+                  handleCloseEntrada();
+                  handleClickEntrada();
+                }}>confirmar</Button>
               </Box>
             </Modal>
             <Snackbar
-            open={snackbarOpen}
-            autoHideDuration={6000}
-            onClose={handleCloseSnackbar}
-            message="entrada registrada"
-            action={action}
+              open={snackbarOpenEntrada}
+              autoHideDuration={3500}
+              onClose={handleCloseSnackbarEntrada}
+              message="Entrada registrada"
+              action={actionEntrada}
             />
-            </React.Fragment>
+          </React.Fragment>
 
-            <React.Fragment>
+          <React.Fragment>
             <Button type='button' variant='contained' id='saida' onClick={handleOpenSaida}> Registrar Saida </Button>
             <Modal
               open={openSaida}
@@ -155,39 +195,37 @@ function Home() {
               aria-labelledby="saida-modal-title"
               aria-describedby="saida-modal-description"
             >
-              <Box sx={{ ...style, minwidth: 200,maxWidth: 500 }}>
+              <Box sx={{ ...style, minwidth: 200, maxWidth: 500 }}>
                 <h2 id="child-modal-title">Registrar saida</h2><br />
                 <div id='senha_sair'>
-                <input  type="password" placeholder='digite sua senha'/>
+                  <input type="password" placeholder='digite sua senha' />
                 </div><br />
                 <Button
-        type='button'
-        variant='contained'
-        id='botão_comfirm_home'
-        onClick={() => {
-          handleCloseSaida();
-          handleClick();
-        }}
-      >
-        Confirmar
-      </Button>
+                  type='button'
+                  variant='contained'
+                  id='botão_comfirm_home'
+                  onClick={() => {
+                    handleCloseSaida();
+                    handleClickSaida();
+                  }}
+                >
+                  Confirmar
+                </Button>
               </Box>
-              
             </Modal>
             <Snackbar
-        open={snackbarOpen}
-        autoHideDuration={6000}
-        onClose={handleCloseSnackbar}
-        message="Saida registrada"
-        action={action}
-      />
-            </React.Fragment>
+              open={snackbarOpenSaida}
+              autoHideDuration={3500}
+              onClose={handleCloseSnackbarSaida}
+              message="Saída registrada"
+              action={actionSaida}
+            />
+          </React.Fragment>
         </div>
       </div>
     </div>
   )
 
-  
 }
 
-export default Home
+export default Home;
