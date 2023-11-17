@@ -51,7 +51,7 @@ function Configuracao() {
         <div id='card_config'>
           <div>
             <h3>nome:</h3>
-            <p>cosimaj857@mainmile.com</p>
+            <p>Gabriel Santos</p>
           </div>
         </div><br />
 
@@ -65,14 +65,14 @@ function Configuracao() {
         <div id='card_config'>
           <div>
             <h3>CPF:</h3>
-            <p>cosimaj857@mainmile.com</p>
+            <p>111.111.111-11</p>
           </div>
         </div><br />
 
         <div id='card_config'>
           <div>
             <h3>Código do funcionário:</h3>
-            <p>cosimaj857@mainmile.com</p>
+            <p>9876543</p>
           </div>
         </div><br />
         

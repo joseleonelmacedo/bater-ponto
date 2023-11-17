@@ -235,7 +235,7 @@ function Home() {
             </Modal>
             <Snackbar
               open={snackbarOpenEntrada}
-              autoHideDuration={3500}
+              autoHideDuration={2500}
               onClose={handleCloseSnackbarEntrada}
               message="Entrada registrada"
               action={actionEntrada}
@@ -270,7 +270,7 @@ function Home() {
             </Modal>
             <Snackbar
               open={snackbarOpenSaida}
-              autoHideDuration={3500}
+              autoHideDuration={2500}
               onClose={handleCloseSnackbarSaida}
               message="Saída registrada"
               action={actionSaida}
@@ -322,7 +322,7 @@ function Home() {
           </Modal>
           <Snackbar
             open={snackbarOpenCorrigirPonto}
-            autoHideDuration={3500}
+            autoHideDuration={2500}
             onClose={handleCloseSnackbarCorrigirPonto}
             message="Correção de ponto registrada"
             action={actionCorrigirPonto}
