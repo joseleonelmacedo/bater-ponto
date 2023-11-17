@@ -164,21 +164,21 @@ function Home() {
             <div className="card">
               <div className="card-content_presença">
                 <h3>presença</h3>
-                <p>Conteúdo do card 1.</p>
+                <a href="Presenca"><p>Conferir presença</p></a>
               </div>
             </div>
 
             <div className="card">
               <div className="card-content_faltasj">
                 <h3>faltas justificadas</h3>
-                <p>Conteúdo do card 2.</p>
+                <a href="FaltasJus"><p>Conferir faltas justificadas</p></a>
               </div>
             </div>
 
             <div className="card">
               <div className="card-content_faltas">
                 <h3>faltas</h3>
-                <p>Conteúdo do card 3.</p>
+                <a href="Faltas"><p>Conferir faltas</p></a>
               </div>
             </div>
           </div>

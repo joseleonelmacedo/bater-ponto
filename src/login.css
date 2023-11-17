@@ -610,4 +610,258 @@ a:hover {
     color: #FFFFFF;
   }
 }
+#calendario_presenca{
+border: solid #1abc9c 1px;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+}
 
+#calendario_presenca .month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+#calendario_presenca .month ul {
+  margin: 0;
+  padding: 0;
+}
+
+#calendario_presenca .month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#calendario_presenca .month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+#calendario_presenca .month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+#calendario_presenca .weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+#calendario_presenca .weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+#calendario_presenca .days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+#calendario_presenca .days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+#calendario_presenca .days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  #calendario_presenca .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  #calendario_presenca .weekdays li, .days li {width: 12.5%;}
+  #calendario_presenca .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  #calendario_presenca .weekdays li, .days li {width: 12.2%;}
+}
+
+#calendario_faltas{
+  border: solid red 1px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  
+  #calendario_faltas .month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #bc1a1a;
+    text-align: center;
+  }
+  
+  #calendario_faltas .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #calendario_faltas .month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  #calendario_faltas .month .prev {
+    float: left;
+    padding-top: 10px;
+  }
+  
+  #calendario_faltas .month .next {
+    float: right;
+    padding-top: 10px;
+  }
+  
+  #calendario_faltas .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+  
+  #calendario_faltas .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+  }
+  
+  #calendario_faltas .days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+  }
+  
+  #calendario_faltas .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+  }
+  
+  #calendario_faltas .days li .active {
+    padding: 5px;
+    background: #bc1a1a;
+    color: white !important
+  }
+  
+  /* Add media queries for smaller screens */
+  @media screen and (max-width:720px) {
+    #calendario_faltas .weekdays li, .days li {width: 13.1%;}
+  }
+  
+  @media screen and (max-width: 420px) {
+    #calendario_faltas .weekdays li, .days li {width: 12.5%;}
+    #calendario_faltas .days li .active {padding: 2px;}
+  }
+  
+  @media screen and (max-width: 290px) {
+    #calendario_faltas .weekdays li, .days li {width: 12.2%;}
+  }
+
+  
+#calendario_faltasjus{
+  border: solid rgb(217, 255, 0) 1px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  
+  #calendario_faltasjus .month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #acbc1a;
+    text-align: center;
+  }
+  
+  #calendario_faltasjus .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #calendario_faltasjus .month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  #calendario_faltasjus .month .prev {
+    float: left;
+    padding-top: 10px;
+  }
+  
+  #calendario_faltasjus .month .next {
+    float: right;
+    padding-top: 10px;
+  }
+  
+  #calendario_faltasjus .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+  
+  #calendario_faltasjus .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+  }
+  
+  #calendario_faltasjus .days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+  }
+  
+  #calendario_faltasjus .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+  }
+  
+  #calendario_faltasjus .days li .active {
+    padding: 5px;
+    background: #bcb11a;
+    color: white !important
+  }
+  
+  /* Add media queries for smaller screens */
+  @media screen and (max-width:720px) {
+    #calendario_faltasjus .weekdays li, .days li {width: 13.1%;}
+  }
+  
+  @media screen and (max-width: 420px) {
+    #calendario_faltasjus .weekdays li, .days li {width: 12.5%;}
+    #calendario_faltasjus .days li .active {padding: 2px;}
+  }
+  
+  @media screen and (max-width: 290px) {
+    #calendario_faltas .weekdays li, .days li {width: 12.2%;}
+  }
