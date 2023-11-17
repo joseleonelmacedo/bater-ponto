@@ -314,8 +314,8 @@ function Home() {
                 onClick={() => {
                   handleCloseCorrigirPonto();
                   handleClickCorrigirPonto();
-                }}
-                >
+                }}>
+                
                 Confirmar
               </Button>
             </Box>
