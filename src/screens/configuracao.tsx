@@ -44,24 +44,40 @@ function Configuracao() {
           <img src="imagens/iconHome.png" alt="" />
       </div>
       <div id='conteudo_config'>
-
         <h1>Configurações da conta</h1>
         <br />
         <hr />
         
-        <div id='nome_config'>
-            <div><h3>nome:</h3> <p>cosimaj857@mainmile.com</p></div>
+        <div id='card_config'>
+          <div>
+            <h3>nome:</h3>
+            <p>cosimaj857@mainmile.com</p>
+          </div>
         </div><br />
 
-        <div id='email_config'><div>
-            <h3>email:</h3> cosimaj857@mainmile.com</div>
+        <div id='card_config'>
+          <div>
+            <h3>email:</h3>
+            <p>cosimaj857@mainmile.com</p>
+          </div>
+        </div><br />
+
+        <div id='card_config'>
+          <div>
+            <h3>CPF:</h3>
+            <p>cosimaj857@mainmile.com</p>
+          </div>
+        </div><br />
+
+        <div id='card_config'>
+          <div>
+            <h3>Código do funcionário:</h3>
+            <p>cosimaj857@mainmile.com</p>
+          </div>
         </div><br />
         
         <hr />
         <br />
-      
-      
-
       </div>
     </div>
   )

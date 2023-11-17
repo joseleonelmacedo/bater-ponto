@@ -4,6 +4,8 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Snackbar } from '@mui/material';
+import { format, parseISO } from 'date-fns';
+
 
 import '../conteudo.css';
 
@@ -27,11 +29,10 @@ function Home() {
     setOpenEntrada(true);
   };
 
-
   const handleCloseEntrada = () => {
     setOpenEntrada(false);
   };
-
+  
   const handleOpenSaida = () => {
     setOpenSaida(true);
   };
@@ -53,6 +54,7 @@ function Home() {
     }
     setSnackbarOpenEntrada(false);
   };
+
 
   const handleClickSaida = () => {
     setSnackbarOpenSaida(true);
@@ -84,6 +86,44 @@ function Home() {
       </IconButton>
     </React.Fragment>
   );
+  const [openCorrigirPonto, setOpenCorrigirPonto] = React.useState(false);
+
+  const handleOpenCorrigirPonto = () => {
+    setOpenCorrigirPonto(true);
+  };
+
+  const handleCloseCorrigirPonto = () => {
+    setOpenCorrigirPonto(false);
+  };
+
+  const [snackbarOpenCorrigirPonto, setSnackbarOpenCorrigirPonto] = React.useState(false);
+
+  const handleClickCorrigirPonto = () => {
+    setSnackbarOpenCorrigirPonto(true);
+  };
+
+  const handleCloseSnackbarCorrigirPonto = (_event: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setSnackbarOpenCorrigirPonto(false);
+  };
+
+  const actionCorrigirPonto = (
+    <React.Fragment>
+      <Button color="secondary" size="small" onClick={handleCloseSnackbarCorrigirPonto}>
+        UNDO
+      </Button>
+      <IconButton size="small" aria-label="close" color="inherit" onClick={handleCloseSnackbarCorrigirPonto}>
+      </IconButton>
+    </React.Fragment>
+  );
+
+
+
+  function setCurrentDate(_arg0: Date): void {
+    throw new Error('Function not implemented.');
+  }
 
   return (
     <div className='Home'>
@@ -168,9 +208,24 @@ function Home() {
                   <option value="Empresa">Empresa</option>
                 </select><br /><br />
 
+                <div id='data'>
+                <label htmlFor="dateofbirth">Data</label><br />
+                <input
+                type="date"
+                name="dateofbirth"
+                id="dateofbirth"
+                value={new Date().toISOString().split('T')[0]}
+                onChange={(e) => setCurrentDate(parseISO(e.target.value))}
+                />                
+                </div>
+                
+                <br />
+                
                 <div>
                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15800.161530914553!2d-34.939626!3d-8.0973644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1699603166731!5m2!1spt-PT!2sbr" width="90%" height="300" style={{ border: '0' }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+
+                
 
                 <Button type='button' variant='contained' id='botão_comfirm_home' onClick={() => {
                   handleCloseEntrada();
@@ -221,6 +276,58 @@ function Home() {
               action={actionSaida}
             />
           </React.Fragment>
+
+          <React.Fragment>
+          <Button type='button' variant='contained' id='Corrigir' onClick={handleOpenCorrigirPonto}>
+            Corrigir Ponto
+          </Button>
+          <Modal
+            open={openCorrigirPonto}
+            onClose={handleCloseCorrigirPonto}
+            aria-labelledby="corrigirPonto-modal-title"
+            aria-describedby="corrigirPonto-modal-description"
+          >
+            <Box sx={{ ...style, minwidth: 200, maxWidth: 500 }}>
+              <h2 id="child-modal-title">Corrigir Ponto</h2><br />
+
+              <div id='data'>
+                <label htmlFor="dateofbirth">Data</label><br />
+                <input
+                type="date"
+                name="dateofbirth"
+                id="dateofbirth"
+                value={new Date().toISOString().split('T')[0]}
+                onChange={(e) => setCurrentDate(parseISO(e.target.value))}
+                />                
+                </div>
+
+                <br />
+              
+                <div id='cod_funcionario'>
+                  <input type="text" placeholder='digite o motivo da correção' /><br /><br />
+                </div>
+              <br />
+              <Button
+                type='button'
+                variant='contained'
+                id='botão_comfirm_home'
+                onClick={() => {
+                  handleCloseCorrigirPonto();
+                  handleClickCorrigirPonto();
+                }}
+                >
+                Confirmar
+              </Button>
+            </Box>
+          </Modal>
+          <Snackbar
+            open={snackbarOpenCorrigirPonto}
+            autoHideDuration={3500}
+            onClose={handleCloseSnackbarCorrigirPonto}
+            message="Correção de ponto registrada"
+            action={actionCorrigirPonto}
+          />
+        </React.Fragment>
         </div>
       </div>
     </div>

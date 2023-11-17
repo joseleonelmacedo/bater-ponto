@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+
 import { Button } from '@mui/material';
 import '../login.css'
 
@@ -28,7 +29,7 @@ function Login() {
         <br />
 
         <Button type='button' variant='contained' id='botão_login'>
-          <a href="home" id='link'>next</a>
+        <Link to="home" id='link'>next</Link>
         </Button><br />
         <div id='esqueci_senha'>
           <a href="">Esqueci Senha</a>

@@ -330,14 +330,13 @@ a:hover {
 
 #slide{
   width: 80%;
-  /*border: solid blue 1px;*/
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 #botoes_home{
-  width: 50%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -350,7 +349,7 @@ a:hover {
 
 }
 #entrada{  
-  width: 300px;
+  width: 200px;
   height: 90px;
   margin-left: 20px;
   font-size: 20px;
@@ -366,12 +365,21 @@ a:hover {
 }
 
 #saida{  
-  width: 300px;
+  width: 200px;
   height: 90px;
   margin-left: 20px;
   font-size: 20px;
   margin-bottom: 10px;
   background-color: rgb(150, 119, 176);
+}
+
+#Corrigir{  
+  width: 200px;
+  height: 90px;
+  margin-left: 20px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background-color: rgb(161, 176, 119);
 }
 
 #perfil{
@@ -444,7 +452,6 @@ a:hover {
 }
 
 #conteudo_config{
-  border: solid 1px blue;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -477,6 +484,14 @@ a:hover {
   width: 90%;
 }
 
+#email_config {
+  border: solid rgb(0, 255, 136) 1px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 90%;
+}
+
 
 #codigo_funcionario_config {
   border: solid rgb(111, 0, 255) 1px;
@@ -495,7 +510,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 950px;
+  max-width: 950px;  
   margin: 10 auto; 
 }
 
@@ -542,6 +557,16 @@ a:hover {
   color: rgb(146, 23, 7);
 }
 
+  [type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+
 #botoes_home {
   display: flex;
   flex-wrap: wrap;
@@ -550,8 +575,39 @@ a:hover {
 }
 
 #entrada,
-#saida {
+#saida,#Corrigir {
   margin: 0 10px;
   margin-top: 20px;
 
 }
+
+
+
+@media screen and (max-width: 1000px){
+  .card-slider {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  #informacões{
+    width: 200px;
+    height: 80px;
+    float: right;
+    margin-right: 20px;
+    color: #FFFFFF;
+  }
+}
+
