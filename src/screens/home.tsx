@@ -4,8 +4,7 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Snackbar } from '@mui/material';
-import { format, parseISO } from 'date-fns';
-
+import { parseISO } from 'date-fns';
 
 import '../conteudo.css';
 
@@ -164,7 +163,7 @@ function Home() {
             <div className="card">
               <div className="card-content_presença">
                 <h3>presença</h3>
-                <a href="Presenca"><p>Conferir presença</p></a>
+                <a href="Presenca"><p>Conferir presenças</p></a>
               </div>
             </div>
 
@@ -224,8 +223,6 @@ function Home() {
                 <div>
                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15800.161530914553!2d-34.939626!3d-8.0973644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1699603166731!5m2!1spt-PT!2sbr" width="90%" height="300" style={{ border: '0' }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-
-                
 
                 <Button type='button' variant='contained' id='botão_comfirm_home' onClick={() => {
                   handleCloseEntrada();
