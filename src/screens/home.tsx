@@ -150,7 +150,7 @@ function Home() {
           </div>
 
           <div id='informacões'>
-            <p>NOME: <span> Gabriel Santos</span></p><br />
+            <p>NOME: <span>  Jose Leonel</span></p><br />
             <p>CODIGO DO FUNCIONARIO: <span>9876543</span></p>
           </div>
         </div>
@@ -275,9 +275,11 @@ function Home() {
           </React.Fragment>
 
           <React.Fragment>
+    
           <Button type='button' variant='contained' id='Corrigir' onClick={handleOpenCorrigirPonto}>
             Corrigir Ponto
           </Button>
+
           <Modal
             open={openCorrigirPonto}
             onClose={handleCloseCorrigirPonto}

@@ -44,7 +44,7 @@ function Login() {
 
         <br />
 
-        <Button type='button' onClick={() => login(),() => navigate("Home")} variant='contained' id='botão_login'>
+        <Button type='button' onClick={() => login()} variant='contained' id='botão_login'>
         <Link to="home" id='link'>next</Link>
         </Button><br />
         <div id='esqueci_senha'>

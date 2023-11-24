@@ -34,7 +34,7 @@ function Configuracao() {
           </div>
 
             <div id='informacões'>
-                <p>NOME: <span> Gabriel Santos</span></p><br />
+                <p>NOME: <span> Jose Leonel</span></p><br />
                 <p>CODIGO DO FUNCIONARIO: <span>9876543</span></p>
             </div>
         </div>
@@ -51,14 +51,14 @@ function Configuracao() {
         <div id='card_config'>
           <div>
             <h3>nome:</h3>
-            <p>Gabriel Santos</p>
+            <p> Jose Leonel</p>
           </div>
         </div><br />
 
         <div id='card_config'>
           <div>
             <h3>email:</h3>
-            <p>cosimaj857@mainmile.com</p>
+            <p>joseleonel@gmail.com</p>
           </div>
         </div><br />
 

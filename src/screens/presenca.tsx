@@ -83,7 +83,7 @@ function Presenca() {
   <li>21</li>
   <li>22</li>
   <li>23</li>
-  <li>24</li>
+  <li><span className="active">24</span></li>
   <li>25</li>
   <li>26</li>
   <li>27</li>
